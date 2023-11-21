@@ -1,0 +1,28 @@
+### GET ALL
+GET http://localhost:1234/api/users
+
+### GET BY ID
+GET http://localhost:1234/api/users/c1226430-8825-11ee-92e6-5c879cd6d846
+
+### CREATE
+POST http://localhost:1234/api/users
+Content-Type: application/json
+
+{
+  "name":"pablo",
+  "gmail": "pablo@gmail.com",
+  "password": "12345678"
+}
+
+### UPDATE
+PATCH http://localhost:1234/api/users
+Content-Type: application/json
+
+{
+  "name":"maria",
+  "gmail": "pablo@gmail.com",
+  "password": "12345678"
+}
+
+### DELETE
+DELETE http://localhost:1234/api/users/3d9465cb-87e8-11ee-92e6-5c879cd6d846

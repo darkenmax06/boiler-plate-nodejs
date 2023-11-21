@@ -29,6 +29,8 @@ try{
 	console.log(err)
 }
 
+// definimos los modelos de la base de datos, yq que estamos utilizando
+// una arquitectura mvc, le pasamos los modelos por injeccion de dependencias
 const userModel = new UserModel(connection)
 
 Server({userModel})
