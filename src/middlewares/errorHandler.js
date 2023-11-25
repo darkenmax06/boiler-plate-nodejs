@@ -4,6 +4,7 @@ function errorHandler (err,req,res,next){
   console.log("el error es: ", err)
 
   const errors = {
+    "BAD_LOGIN": ()=> res.status(400).json({error: "La contrasena o el gmail proporcionado no es valido"}) ,
     "INVALID_ID": ()=> res.status(400).json({error: 'La id proporcionada no es valida o el recurso ya ha sido eliminado'}),
     "REQUIRED_ID": ()=> res.status(400).json({error: 'La id es requerida para realizar esta accion'}),
     // === ZOD ERRORS

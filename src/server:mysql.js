@@ -13,12 +13,12 @@ const {
 	NODE_ENV 
 } = process.env
 
-let config = null 
-
 // Dependiendo del entorno en el que se ejecute usara una base de datos
 // u otra, (estos entornos se definen en el package.json)
-if (NODE_ENV == 'development') config = MYSQL_DEVELOPMENT_URI
-else	config = MYSQL_PRODUCTION_URI
+let connectionString = NODE_ENV == "development"
+? MYSQL_DEVELOPMENT_URI
+: MYSQL_PRODUCTION_URI
+
 
 let connection = null
 
