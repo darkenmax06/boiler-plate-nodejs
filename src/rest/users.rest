@@ -2,7 +2,7 @@
 GET http://localhost:1234/api/users
 
 ### GET BY ID
-GET http://localhost:1234/api/users/c1226430-8825-11ee-92e6-5c879cd6d846
+GET http://localhost:1234/api/users/ca0158bb-8cc4-11ee-8bb3-5c879cd6d846
 
 ### CREATE
 POST http://localhost:1234/api/users
@@ -15,14 +15,14 @@ Content-Type: application/json
 }
 
 ### UPDATE
-PATCH http://localhost:1234/api/users
+PATCH http://localhost:1234/api/users/ca0158bb-8cc4-11ee-8bb3-
 Content-Type: application/json
 
 {
   "name":"maria",
-  "gmail": "pablo@gmail.com",
+  "gmail": "1234@gmail.com",
   "password": "12345678"
 }
 
 ### DELETE
-DELETE http://localhost:1234/api/users/3d9465cb-87e8-11ee-92e6-5c879cd6d846
+DELETE http://localhost:1234/api/users/6569ec0aacc29a5d91043d48

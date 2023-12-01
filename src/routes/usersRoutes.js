@@ -7,10 +7,10 @@ function usersRouter ({userModel}){
 	const userController = new UserController(userModel)
 
 	router.get('/', userController.getAll)
-	router.get('/:id', userController.getById)
+	router.get('/:userId', userController.getById)
 	router.post('/', userValidator ,userController.create)
-	router.patch('/', userValidator ,userController.update)
-	router.delete('/:id' ,userController.delete)
+	router.patch('/:userId', userValidator ,userController.update)
+	router.delete('/:userId' ,userController.delete)
 
 	return router
 }

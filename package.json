@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "start:mysql": "NODE_ENV=development node src/server:mysql.js",
-    "dev:mysql": "PORT=1234 NODE_ENV=development nodemon src/server:mysql.js"
+    "start:mongo": "NODE_ENV=development node src/server:mongo.js",
+    "dev:mysql": "PORT=1234 NODE_ENV=development nodemon src/server:mysql.js",
+    "dev:mongo": "PORT=1234 NODE_ENV=development nodemon src/server:mongo.js"
   },
   "keywords": [],
   "author": "",

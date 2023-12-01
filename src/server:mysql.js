@@ -15,15 +15,15 @@ const {
 
 // Dependiendo del entorno en el que se ejecute usara una base de datos
 // u otra, (estos entornos se definen en el package.json)
-let connectionString = NODE_ENV == "development"
-? MYSQL_DEVELOPMENT_URI
-: MYSQL_PRODUCTION_URI
+let connectionString = NODE_ENV == 'development'
+	? MYSQL_DEVELOPMENT_URI
+	: MYSQL_PRODUCTION_URI
 
 
 let connection = null
 
 try{
-	connection = await mysql.createConnection(config)
+	connection = await mysql.createConnection(connectionString)
 	console.log('=== MYSQL === // database connected')
 }catch (err){
 	console.log(err)
