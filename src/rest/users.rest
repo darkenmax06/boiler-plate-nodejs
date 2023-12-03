@@ -2,7 +2,8 @@
 GET http://localhost:1234/api/users
 
 ### GET BY ID
-GET http://localhost:1234/api/users/ca0158bb-8cc4-11ee-8bb3-5c879cd6d846
+GET http://localhost:1234/api/users/4bfc4197-922e-11ee-a13a-5c879cd6d846
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0YmZjNDE5Ny05MjJlLTExZWUtYTEzYS01Yzg3OWNkNmQ4NDYiLCJpYXQiOjE3MDE2NDY1Nzd9.so6ZquqTFYb-t4TL1YUQ5L5swaDImMZp8mueiz9AP14
 
 ### CREATE
 POST http://localhost:1234/api/users
@@ -10,19 +11,21 @@ Content-Type: application/json
 
 {
   "name":"pablo",
-  "gmail": "pablo@gmail.com",
+  "gmail": "maria@gmail.com",
   "password": "12345678"
 }
 
 ### UPDATE
-PATCH http://localhost:1234/api/users/ca0158bb-8cc4-11ee-8bb3-
+PATCH http://localhost:1234/api/users/4bfc4197-922e-11ee-a13a-5c879cd6d846
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0YmZjNDE5Ny05MjJlLTExZWUtYTEzYS01Yzg3OWNkNmQ4NDYiLCJpYXQiOjE3MDE2NDY1Nzd9.so6ZquqTFYb-t4TL1YUQ5L5swaDImMZp8mueiz9AP14
 
 {
-  "name":"maria",
-  "gmail": "1234@gmail.com",
+  "name":"pablo",
+  "gmail": "pablo@gmail.com",
   "password": "12345678"
 }
 
 ### DELETE
-DELETE http://localhost:1234/api/users/6569ec0aacc29a5d91043d48
+DELETE http://localhost:1234/api/users/ca0158bb-8cc4-11ee-8bb3-5c879cd6d846
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0YmZjNDE5Ny05MjJlLTExZWUtYTEzYS01Yzg3OWNkNmQ4NDYiLCJpYXQiOjE3MDE2NDY1Nzd9.so6ZquqTFYb-t4TL1YUQ5L5swaDImMZp8mueiz9AP14

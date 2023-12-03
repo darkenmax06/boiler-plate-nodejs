@@ -36,9 +36,7 @@ class UserModel {
 
 	login = async ({password, gmail})=>{
 		const user = await User.findOne({gmail})
-
-		console.log(user)
-		console.log(password)
+    
 		const isCorrectPassword = user
 			? await compare(password ,user.password)
 			: false
@@ -46,7 +44,7 @@ class UserModel {
 		if (!isCorrectPassword) throw {name: 'BAD_LOGIN'}
 
 		const token = jwt.sign({
-			userId: user.userId
+			userId: user.toJSON().userId
 		},  process.env.SECRET_KEY)
 
 		

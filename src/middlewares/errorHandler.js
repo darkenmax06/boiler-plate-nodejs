@@ -4,6 +4,8 @@ function errorHandler (err,req,res,next){
 	console.log('el error es: ', err)
 
 	const errors = {
+		'INVALID_USER_VALIDATE': ()=>res.status(400).json({error: 'tu cuenta ha sido eliminada', logout: true}),
+		'JsonWebTokenError':()=> res.status(400).json({error: 'Sus credenciales no estan siendo porporcionadas o no son correctas'}) ,
 		'BAD_LOGIN': ()=> res.status(400).json({error: 'La contrasena o el gmail proporcionado no es valido'}) ,
 		'INVALID_ID': ()=> res.status(400).json({error: 'La id proporcionada no es valida, el recurso no existe o ya ha sido eliminado'}),
 		'REQUIRED_ID': ()=> res.status(400).json({error: 'La id es requerida para realizar esta accion'}),

@@ -25,6 +25,8 @@ class UserModel {
 			'SELECT BIN_TO_UUID(userId) userId, name, gmail FROM users WHERE userId = UUID_TO_BIN(?) ',
 			[userId]
 		)
+
+		if (!user) throw {name: 'INVALID_ID'}
 		return user
 	}
 

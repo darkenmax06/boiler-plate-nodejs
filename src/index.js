@@ -14,7 +14,7 @@ function Server ({userModel}){
 	app.use('/api/users',usersRouter({userModel}) )
 	app.use('/api/login',loginRoute({userModel}) )
 
-  app.use( errorHandler )
+	app.use( errorHandler )
 
 	const PORT = process.env.PORT ?? 3000
 	return app.listen(PORT, ()=> console.log(`Server on port ${PORT} http://localhost:${PORT}`))
