@@ -1,0 +1,17 @@
+-- copy and paste this code
+
+DROP DATABASE boilerDB;
+CREATE DATABASE IF NOT EXISTS boilerDB;
+USE boilerDB;
+
+CREATE TABLE users (
+	userId BINARY(16) PRIMARY KEY NOT NULL DEFAULT( UUID_TO_BIN( UUID() ) ),
+    name VARCHAR(256) NOT NULL,
+    gmail VARCHAR(256) UNIQUE NOT NULL,
+    password VARCHAR(256) NOT NULL
+);
+
+INSERT INTO users (name,gmail,password)
+VALUES ("juan","juan@gmail.com","12345678");
+
+SELECT BIN_TO_UUID(userId), name, gmail FROM users
